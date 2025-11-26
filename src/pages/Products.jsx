@@ -6,12 +6,15 @@ import ProductCard from '@/components/ProductCard';
 
 const Products = () => {
   const cuts = [
-    { id: 1, name: 'Lomo Fino', description: 'Corte premium, tierno y jugoso', image: 'Lomo fino de res premium, calidad de restaurante, sobre una tabla de cortar de mármol oscuro' },
-    { id: 2, name: 'Churrasco', description: 'Ideal para parrilla', image: 'Churrasco de res fresco listo para asar' },
-    { id: 3, name: 'Costillas', description: 'Perfectas para BBQ', image: 'Costillas de res crudas, estilo St. Louis, con un adobo seco, listas para la parrilla' },
-    { id: 4, name: 'Punta de Anca', description: 'Versátil y sabroso', image: 'Punta de anca de res cortada en filetes' },
-    { id: 5, name: 'Osobuco', description: 'Ideal para guisos', image: 'Osobuco de res con hueso y tuétano' },
-    { id: 6, name: 'Carne Molida Premium', description: 'Selección especial', image: 'Carne molida de res premium, 90/10, en un tazón de cerámica blanca, vista desde arriba' }
+    { id: 1, name: 'Panzeta', description: 'Corte premium, tierno y jugoso', image: '/images/panzeta.jpg' },
+    { id: 2, name: 'Tomahook', description: 'Ideal para parrilla', image: '/images/Tomahooks.png' },
+    { id: 3, name: 'Costillar', description: 'Perfectas para BBQ', image: '/images/Costillar.png' },
+    { id: 4, name: 'Lomo', description: 'Versátil y sabroso', image: '/images/Lomo_falda.png' },
+    { id: 5, name: 'Lonja', description: 'Ideal para guisos', image: '/images/Lonja.png' },
+    { id: 6, name: 'Chuletas', description: 'Selección especial', image: '/images/Chuletas.png' },
+    { id: 7, name: 'Fritada', description: 'Selección especial', image: '/images/Fritada.png' },
+    { id: 8, name: 'Tuetano', description: 'Selección especial', image: '/images/tuetano.png' },
+    { id: 9, name: 'Cordero', description: 'Selección especial', image: '/images/Cordero.png' },
   ];
 
   const preparations = [

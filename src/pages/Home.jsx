@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChefHat, Award, Users, Calculator } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import HeroCarousel from '@/components/HeroCarousel';
+
 
 const Home = () => {
   const features = [
@@ -14,8 +16,8 @@ const Home = () => {
     },
     {
       icon: <ChefHat className="h-8 w-8" />,
-      title: 'Preparaciones Especiales',
-      description: 'Parrilladas, entradas y platos preparados listos para disfrutar'
+      title: 'Cortes sellados al vacío',
+      description: 'Prolonga su vida util, mantiene el corte fresco y conserva su sabor'
     },
     {
       icon: <Users className="h-8 w-8" />,
@@ -36,39 +38,42 @@ const Home = () => {
         <meta name="description" content="Bienvenido a Super Carnes, tu carnicería de confianza en Valle de los Chillos. Cortes premium, parrilladas y precios especiales para mayoristas." />
       </Helmet>
 
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img className="w-full h-full object-cover" alt="Parrillada de carnes premium" src="https://images.unsplash.com/photo-1571451223213-ab396a71ba74" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 z-10 text-center text-white">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Bienvenido a Super Carnes
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-              Los mejores cortes de carne premium en Valle de los Chillos
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/productos">
-                <Button size="lg" className="bg-red-600 hover:bg-red-700 text-lg px-8">
-                  Ver Productos
-                </Button>
-              </Link>
-              <Link to="/mayoristas">
-                <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20">
-                  Precios Mayoristas
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            <HeroCarousel>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Bienvenido a Super Carnes Premium
+          </h1>
+          <p className="text-xl md:text-2xl mb-16 max-w-2xl mx-auto">
+            {/* Los mejores cortes de carne premium en el Valle de los Chillos */}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/productos">
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-lg px-8">
+                Ver Productos
+              </Button>
+            </Link>
+            <Link to="/mayoristas">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20"
+              >
+                Precios Mayoristas
+              </Button>
+            </Link>
+            <a href="https://maps.app.goo.gl/kYUPof3xjKTUqLyQ7" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 text-lg px-8">
+                Ubicación
+              </Button>
+            </a>
+          </div>
+        </motion.div>
+      </HeroCarousel>
+
 
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">

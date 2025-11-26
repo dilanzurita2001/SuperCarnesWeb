@@ -23,7 +23,8 @@ const ProductCard = ({
     delay: index * 0.1
   }} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow group">
       <div className="relative h-64 overflow-hidden">
-        <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={product.name} src="https://horizons-cdn.hostinger.com/818a7a5c-b13e-4303-b796-d5d9d24b6040/lomo-fino-ia-6ujvh.png" />
+        <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt={product.name} src={product.image}
+/>
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
         <div className="absolute bottom-4 left-4 right-4">
           <h3 className="text-white text-2xl font-bold mb-1">{product.name}</h3>
